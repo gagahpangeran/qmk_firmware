@@ -7,8 +7,8 @@ enum gpr_layers {
   _NAV,
 };
 
-#define LOWER MO(_LOWER)
-#define RAISE MO(_RAISE)
+#define LOWER TT(_LOWER)
+#define RAISE TT(_RAISE)
 #define NV_SCLN LT(_NAV, KC_SCLN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
