@@ -39,8 +39,6 @@
 
 #define TAPPING_TOGGLE 2
 
-#define TAPPING_TERM 200
-
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 0

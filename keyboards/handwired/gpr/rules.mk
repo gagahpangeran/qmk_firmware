@@ -16,7 +16,6 @@ SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 NKRO_ENABLE = yes           # USB Nkey Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
-TAP_DANCE_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 
 # Disable unsupported hardware
