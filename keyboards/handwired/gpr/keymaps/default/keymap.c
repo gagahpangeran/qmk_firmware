@@ -52,3 +52,16 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &delete_key_override,
     NULL
 };
+
+enum combo_events {
+  SFT_CAPS,
+  COMBO_LENGTH
+};
+
+uint16_t COMBO_LEN = COMBO_LENGTH;
+
+const uint16_t PROGMEM shift_combo[] = { KC_LSFT, KC_RSFT, COMBO_END };
+
+combo_t key_combos[] = {
+  [SFT_CAPS] = COMBO(shift_combo, KC_CAPS),
+};
