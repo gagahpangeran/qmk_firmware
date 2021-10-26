@@ -13,8 +13,6 @@ enum gpr_layers {
 #define NV_SCLN LT(_NAV, KC_SCLN)
 #define CTL_ESC LCTL_T(KC_ESC)
 #define CTL_QUO RCTL_T(KC_QUOT)
-#define ALT_TAB A(KC_TAB)
-#define ALS_TAB LSA(KC_TAB)
 #define SYM_GUI LM(_SYMBOL, MOD_LGUI)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -29,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS,
     _______, _______, _______, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_MINS, KC_EQL,  KC_UNDS, KC_PLUS, KC_PIPE,
-    RESET,   DEBUG,   _______, _______, _______, _______, _______, ALS_TAB, ALT_TAB, _______, _______, _______
+    RESET,   DEBUG,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
   ),
 
   [_FN] = LAYOUT(
