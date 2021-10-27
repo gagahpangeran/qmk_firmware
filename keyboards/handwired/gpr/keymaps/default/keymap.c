@@ -10,10 +10,15 @@ enum gpr_layers {
 #define SYMBOL TT(_SYMBOL)
 #define FN TT(_FN)
 #define NAV TT(_NAV)
+
 #define NV_SCLN LT(_NAV, KC_SCLN)
+
 #define CTL_ESC LCTL_T(KC_ESC)
 #define CTL_ENT RCTL_T(KC_ENT)
+
 #define SYM_GUI LM(_SYMBOL, MOD_LGUI)
+#define SYM_SPC LT(_SYMBOL, KC_SPC)
+
 #define CUT C(KC_X)
 #define COPY C(KC_C)
 #define PASTE C(KC_V)
@@ -23,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     CTL_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    NV_SCLN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-    KC_LCTL, FN,      SYM_GUI, KC_LGUI, KC_LALT, SYMBOL,  KC_SPC,  CTL_ENT, NAV,     CUT,     COPY,    PASTE
+    KC_LCTL, FN,      SYM_GUI, KC_LGUI, KC_LALT, SYMBOL,  SYM_SPC, CTL_ENT, NAV,     CUT,     COPY,    PASTE
   ),
 
   [_SYMBOL] = LAYOUT(
