@@ -17,7 +17,6 @@ NKRO_ENABLE = yes           # USB Nkey Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 KEY_OVERRIDE_ENABLE = yes
-COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 
 # Disable unsupported hardware
