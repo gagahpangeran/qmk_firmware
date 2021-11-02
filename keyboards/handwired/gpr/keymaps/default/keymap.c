@@ -7,6 +7,12 @@ enum gpr_layers {
   _NAV,
 };
 
+enum gpr_keycodes {
+  TD_CUT,
+  TD_COPY,
+  TD_PASTE,
+};
+
 #define SYMBOL TT(_SYMBOL)
 #define FN TT(_FN)
 #define NAV TT(_NAV)
@@ -19,9 +25,16 @@ enum gpr_layers {
 #define SYM_GUI LM(_SYMBOL, MOD_LGUI)
 #define SYM_SPC LT(_SYMBOL, KC_SPC)
 
-#define CUT C(KC_X)
-#define COPY C(KC_C)
-#define PASTE C(KC_V)
+qk_tap_dance_action_t tap_dance_actions[] = {
+    // double tap for cut, copy, and paste
+    [TD_CUT] = ACTION_TAP_DANCE_DOUBLE(C(KC_X), C(S(KC_X))),
+    [TD_COPY] = ACTION_TAP_DANCE_DOUBLE(C(KC_C), C(S(KC_C))),
+    [TD_PASTE] = ACTION_TAP_DANCE_DOUBLE(C(KC_V), C(S(KC_V))),
+};
+
+#define CUT TD(TD_CUT)
+#define COPY TD(TD_COPY)
+#define PASTE TD(TD_PASTE)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
