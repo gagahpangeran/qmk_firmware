@@ -11,6 +11,7 @@ enum gpr_keycodes {
   TD_CUT,
   TD_COPY,
   TD_PASTE,
+  TD_SFT_NAV,
 };
 
 #define SYMBOL TT(_SYMBOL)
@@ -26,22 +27,23 @@ enum gpr_keycodes {
 #define SYM_SPC LT(_SYMBOL, KC_SPC)
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    // double tap for cut, copy, and paste
     [TD_CUT] = ACTION_TAP_DANCE_DOUBLE(C(KC_X), C(S(KC_X))),
     [TD_COPY] = ACTION_TAP_DANCE_DOUBLE(C(KC_C), C(S(KC_C))),
     [TD_PASTE] = ACTION_TAP_DANCE_DOUBLE(C(KC_V), C(S(KC_V))),
+    [TD_SFT_NAV] = ACTION_TAP_DANCE_LAYER_TOGGLE(KC_RSFT, _NAV),
 };
 
 #define CUT TD(TD_CUT)
 #define COPY TD(TD_COPY)
 #define PASTE TD(TD_PASTE)
+#define SFT_NAV TD(TD_SFT_NAV)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     CTL_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    NV_SCLN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_CAPS,
-    KC_LCTL, FN,      SYM_GUI, KC_LGUI, KC_LALT, SYMBOL,  SYM_SPC, CTL_ENT, NAV,     CUT,     COPY,    PASTE
+    KC_LCTL, FN,      SYM_GUI, KC_LGUI, KC_LALT, SYMBOL,  SYM_SPC, CTL_ENT, SFT_NAV, CUT,     COPY,    PASTE
   ),
 
   [_SYMBOL] = LAYOUT(
