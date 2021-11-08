@@ -38,6 +38,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define PASTE TD(TD_PASTE)
 #define SFT_NAV TD(TD_SFT_NAV)
 
+#define WRD_PRV C(KC_LEFT)
+#define WRD_NXT C(KC_RGHT)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
@@ -61,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NAV] = LAYOUT(
-    _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_END,  _______, _______,
+    _______, _______, WRD_NXT, _______, _______, _______, _______, _______, KC_HOME, KC_END,  _______, _______,
     _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, WRD_PRV, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
   )
 };
