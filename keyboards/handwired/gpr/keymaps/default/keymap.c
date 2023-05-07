@@ -26,7 +26,7 @@ enum gpr_keycodes {
 #define SYM_GUI LM(_SYMBOL, MOD_LGUI)
 #define SYM_SPC LT(_SYMBOL, KC_SPC)
 
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     [TD_CUT] = ACTION_TAP_DANCE_DOUBLE(C(KC_X), C(S(KC_X))),
     [TD_COPY] = ACTION_TAP_DANCE_DOUBLE(C(KC_C), C(S(KC_C))),
     [TD_PASTE] = ACTION_TAP_DANCE_DOUBLE(C(KC_V), C(S(KC_V))),
