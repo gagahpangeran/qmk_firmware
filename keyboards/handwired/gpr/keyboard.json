@@ -1,6 +1,8 @@
 {
   "keyboard_name": "GPRboard",
   "manufacturer": "GPR",
+  "url": "https://github.com/gagahpangeran/qmk_firmware/tree/gpr/keyboards/handwired/gpr",
+  "maintainer": "GPR",
   "usb": {
     "vid": "0xFEED",
     "pid": "0x0000",
