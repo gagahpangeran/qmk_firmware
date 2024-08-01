@@ -34,6 +34,10 @@
   "bootloader": "caterina",
   "processor": "atmega32u4",
   "debounce": 5,
+  "tapping": {
+    "toggle": 2,
+    "term": 200
+  },
   "layouts": {
     "LAYOUT": {
       "layout": [
