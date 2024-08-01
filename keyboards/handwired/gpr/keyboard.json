@@ -33,6 +33,7 @@
   "diode_direction": "COL2ROW",
   "bootloader": "caterina",
   "processor": "atmega32u4",
+  "debounce": 5,
   "layouts": {
     "LAYOUT": {
       "layout": [
