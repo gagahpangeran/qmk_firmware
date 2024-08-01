@@ -26,6 +26,9 @@
       "resync": true
     }
   },
+  "build": {
+    "lto": true
+  },
   "matrix_pins": {
     "cols": ["F4", "F5", "B5", "B4", "E6", "D7", "C6", "D4", "D0", "D1", "D2", "D3"],
     "rows": ["F6", "B3", "B2", "B6"]
